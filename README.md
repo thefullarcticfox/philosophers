@@ -1,6 +1,10 @@
 # philosophers
 42 philosophers project about mutexes, semaphores and threads
 
+1. philo_one is a threads and mutexes test
+2. philo_two is a threads and semaphores test
+3. philo_three is a processes and semaphores test
+
 ### Build and run
 1. ```make``` in any ```philo_*``` directory
 2. ```./philo_* [philos_count] [ms_to_die] [ms_to_eat] [ms_to_sleep] [times_to_eat]```
