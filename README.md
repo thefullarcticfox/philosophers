@@ -4,10 +4,12 @@
 ### Build and run
 1. ```make``` in any subdirectory
 2. ```./philo_* [philos_count] [ms_to_die] [ms_to_eat] [ms_to_sleep] [times_to_eat]```
-> last argument is optional: if provided the simulation will stop when all philosophers eated ```times_to_eat``` or will be endless (until someone dies) if not provided
+> last argument is optional: if provided the simulation will stop when all philosophers eated ```times_to_eat``` or will be endless (until someone dies) if not provided 
 
-> simulation ends on any philosopher death anyway
+> Endless test example ```./philo_* 5 800 200 200```
 
-> ```-fsanitize=thread``` helps a lot
+Simulation ends on any philosopher death anyway
 
-> heavy system load impacts the test results (anyone may die even if it's supposed to be endless test)
+Heavy system load impacts the test results and any philo may die even if it's supposed to be an endless test
+
+> ```-g -fsanitize=thread``` helps a lot with deadlocks and data races
