@@ -2,7 +2,7 @@
 42 philosophers project about mutexes, semaphores and threads
 
 ### Build and run
-1. ```make``` in any subdirectory
+1. ```make``` in any ```philo_*``` directory
 2. ```./philo_* [philos_count] [ms_to_die] [ms_to_eat] [ms_to_sleep] [times_to_eat]```
 > last argument is optional: the simulation will stop when all philosophers had ```times_to_eat``` meals if provided. otherwise the test will be endless (until someone dies)
 
