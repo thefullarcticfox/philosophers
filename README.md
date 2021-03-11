@@ -4,7 +4,7 @@
 ### Build and run
 1. ```make``` in any subdirectory
 2. ```./philo_* [philos_count] [ms_to_die] [ms_to_eat] [ms_to_sleep] [times_to_eat]```
-> last argument is optional: if provided the simulation will stop when all philosophers eated ```times_to_eat``` or will be endless (until someone dies) if not provided 
+> last argument is optional: the simulation will stop when all philosophers had ```times_to_eat``` meals if provided. otherwise the test will be endless (until someone dies)
 
 > Endless test example ```./philo_* 5 800 200 200```
 
