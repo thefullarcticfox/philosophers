@@ -8,6 +8,17 @@ size_t			ft_getms(void)
 	return ((size_t)now.tv_sec * 1000 + (size_t)now.tv_usec / 1000);
 }
 
+/*
+**	this fixes usleep on darwin: calling usleep(ms * 1000)
+**	like i did on linux takes much more time on darwin
+*/
+void			ft_usleep(size_t ms)
+{
+	size_t	start = ft_getms();
+	while (ft_getms() - start < ms)
+		usleep(100);
+}
+
 static size_t	ft_strcpy(char *dst, const char *src)
 {
 	size_t	i;

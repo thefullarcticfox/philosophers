@@ -29,7 +29,7 @@ static int		ft_eat(t_philo *ph)
 		ph->lastmeal_ms = ft_getms();
 		ph->eaten_times++;
 		ft_printstate(ph, EATING);
-		usleep(ph->conf->ms_to_eat * 1000);
+		ft_usleep(ph->conf->ms_to_eat);
 	}
 	if (sem_post(ph->forks) < 0)
 		return (ft_printerror(SEMAPH, ph->conf->write_lock));
@@ -52,7 +52,7 @@ void			ft_thread(void *ptr)
 		if (ft_checkstate(ph))
 			exit(1);
 		ft_printstate(ph, SLEEPING);
-		usleep(ph->conf->ms_to_sleep * 1000);
+		ft_usleep(ph->conf->ms_to_sleep);
 		if (ft_checkstate(ph))
 			exit(1);
 		ft_printstate(ph, THINKING);
