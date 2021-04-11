@@ -73,7 +73,7 @@ typedef struct	s_philo_one
 }				t_common;
 
 size_t			ft_getms();
-void			ft_usleep(size_t ms);
+int				ft_usleep(size_t ms, size_t ms_to_die);
 int				ft_checkstate(t_philo *ph);
 int				ft_philocomplete(t_philo *ph);
 int				ft_philowatch(t_common *ph);
